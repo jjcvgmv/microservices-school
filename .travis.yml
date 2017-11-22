@@ -14,15 +14,15 @@ before_install:
   - cd ./$SERVICE
   - nvm install
   - nvm use
-  - node --version
+  - npm install --only=production
 before_script:
   - SERVICE=$SERVICE make ensure-dependencies
   - sleep 10
 script:
-  - make qa
   - TRAVIS_BUILD_ID=$TRAVIS_BUILD_ID TRAVIS_BUILD_NUMBER=$TRAVIS_BUILD_NUMBER make brand
-  - DOCKER_USERNAME=$DOCKER_USERNAME DOCKER_PASSWORD=$DOCKER_PASSWORD make build
-  - DOCKER_USERNAME=$DOCKER_USERNAME DOCKER_PASSWORD=$DOCKER_PASSWORD SERVICE=$SERVICE TRAVIS_BUILD_NUMBER=$TRAVIS_BUILD_NUMBER make build
+  - SERVICE=$SERVICE TRAVIS_BUILD_NUMBER=$TRAVIS_BUILD_NUMBER make package
+  - SERVICE=$SERVICE TRAVIS_BUILD_NUMBER=$TRAVIS_BUILD_NUMBER make qa
+
 matrix:
   include:
   - env: SERVICE=recipes-api
