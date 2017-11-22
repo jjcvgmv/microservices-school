@@ -1,43 +1,38 @@
 sudo: false
-
 cache: yarn
-
 language: node_js
-
 env:
   global:
   - NODE_ENV='test'
-
+  - secure: xH1V051ju+yYPAX09rLi0DtBTmBaFhAME1aqMKfw8UHDFQcPdhnoMwrIAWm/oOzjxHr/DKcGdM8iGQjHjX2eVyAKrtcaafS+YNIEaKA9hGqVRRzBI/0gHCTG5yEiwyYhJEiUGa7QGOlY/BWqorVoo5FqMB7Ar8xm9Sm360r3WGZpu+SnazSqFR45WajBxOd79z+aguu5dNtFA4lbAHFaoT9uNjdPHTS+kt6U4DvUfHm5ODcVqgbNqJ0aqLPeN2NU2UW9xqHzWuT+cJ4xUbkjRL6xsbk/JUiht90Xhh5KhzgmvYNmIMraQ7zPaU+jtWN8H0Npdpq1qGNFDUFmGphcx/5pCvTNMox+50fLTVc2Sk6bB/0Adg2J57d+iDrsugQFp+z8uyCWf9b7lDu0MhmPKR0z8uTscP/lxN4pcZ1coDl9Gv6cZAd6WDgIMZHpZduXVO2cpw1F8PpIkbqRp1BB1FOOGphvu4GAMEFttaQcctRYIvjeBcQlX9TiAvRLF4hujwvJ2s8nOytfPn8jtzTr38nI5q1LRGdgjvaF+//ixW93QKts+f7s6l7IJz4T1gVHHzIIX2+iXOUIAo7Kmd/fO/K+K/1X00F6mZQyueosNVXvsbbuY6f6U5Fpi61f4mVmE6NHMik+6Ovm36CMiVQ5C/YByN8XJ37p7NYqLgCTxDc=
+  - secure: U2iIiJYCsNaLQHiMfDC8VUX1E3BzjS5qyinLp9zgg41Vu7mo+hpUdq/r1rZ6c6Uv2Pkb2axhVoFGbOOGKOofG0aH0qIGKBFCS258wcz9TINVgeKKNz3ms08PEl4m4GhkLAmdTnIz48Rjdgh+JVqNbS49ulhBQSRXTewzf/DjmfmpNIVCte3yo9Tv9OxJ9eKq27yRVjYRhXK/9EKLeIOwhUO3txKCQrxrDTl/rrBWPHKsfnRoPBK9VsqfH01PDA9f0aGqjbQbDFvFHKGPVKnCbA/9TCSB4jlaAI6Nr7sRCc5Xa3NbAGk0RaSFv+6cmmj+ecE71fg4by0Ix5TF3hYWoVq6voPtSvOZugnhoyzntc0Hcie9Q+jXNB+jlCI0NcjotJ7DwmcThjArrjW2ZCS9UWz4qHtEIHhW/N2DJ8+N8u9EeQORk4A04GwkCntrUfZybyvWABU5IL1RdFaeRPf5O3x6QNxkgciqKPW0pQB6VVV+ZkzNHxhxwD/wzoc31oIs4Byx8bSJj3Q4m1c8CYLXqdh3ZJm3iMOhXrcxYMm7uRBX8nRUm/yoL6LQ4Zmv9QUQOjmI4WyhKfdPIKc/qZWzmX+Vm7eASlx51TdRoG6HeBikUowugHBfu9UZXpeMZJjB2FKKMhgJdS3B68p3qGWawixUcPRlBCm1cHb7PIISjVo=
+  - secure: TOe/rPnTxnTKHNS1xtKfC2KrdXLvsb27lX73/5QLRfKey+AtvA0Ie59oqsrFbjrlbLcrWmUX012S+OFrnZUuoGCnKp/uxtcPUUiB235VLbOHEG8JrUVBjS6kEppYM2328m5BzD0kpGpTZ6XMjBhu/+xEwiVOqACjD3QPKQtWJbvmt9ZB4e8vAKDkqqnJYilIJ2WKE+NXykdmxDosb3srMw/at/wmAitLH1DXP2VB7tlkfFt0V3KqelozABzm6zotOWak5OwhryBsYrd+CpDIwrJcwqYJQItLoqRoo2AD+h5pVecxY6OW6yuq61TLY947t7cSE0c1+sn0NGuwxkVtEjqm8OdEXjbyJA14+yMbAoJ8OE1ZcH4oQk8m+MuaW6nQALv8zxCEcuqMAv7A9z05SKzCRqbBsyFYm5pPkUwToHURoQKmsgLuI9r8FiVC+xaSW/mZe9Fuq6zAqRgUnNKAOwTesqHmDspn5hRUQUhLgYbtb9sUi/wm7anbRYHhEC/IeCqGVmJuxah1U+XBK2WP69r/q8ySBvTUUa3jmlUTpD59TO2+Tg+5/4/YD3cQEfQv6gKW+1cZGV2yiCuFZF0NEtrzIstu1EdQ0VNrZFsx2Sa+qRbUM/TkUnFCxxRYopZxAROlIYYPK6LL07LL40Pw7FgSsepMGrPSD3Go1NELV5o=
+  - secure: WsH5uClJ31PfERsbVbmBynRj5A+ojNSSt6AIQs5ASny+VhtSDF+eV3pS4Q2/NRMI3HFcFLOEKbJGn6V81y5TlewUTpeVhuy4P0yOd4X37WcLBMql4yerz17bUSoWP8H55OSED7WgvJWrByEKa1WIvhg1xw+PkPMcBPdEMhiokAekF7ivJ2cO0et2asB3tL7PZbzob9GF2LIHj3JjnUp5vepHl6iU02YU9WiwjjIaR+KYY/G5adZ9i+SIuXaQOH8AFIaUg9BjRlYZC7dmKBF0B0iYlEYtIQJN6jPjaA8uujnfUsoeOrn7Vw1alHwIEhXnAP37zXDJ6b0IX4am5ESHtqgwi1Xjresp65iUBQALa0zQ0ess8uOuhJ7zxlpBiqHU0p+gP5Io9TwWVPLBAbFe+lwEX6w1xnYiJCiaUdDg4xmVTA5ZqsJj5sHg31mcTxQrpmc97MbpgO2Zc9V156ibvhuzNaVkSvArjNIkIgfGskZBXZzucl+zuLdFq+mz10MV2ZFF9o2kUrVKrTY147T2DooG+8Zq/yZBW4TawNHEnAb1s4KH9p1pLi4eV5l3TbXs1/RecYKOvrKTtLCJEubNVBposZezrc7uijfsQkBb3tGoncCHzYoOdDtod6KxxDIW7UKO1P4N8dsqPoMYEcHNtBDdxzy/O2acrzUm41r/js8=
 branches:
   only:
   - master
   - all-services-developed
-
 before_install:
-  - cd ./$SERVICE
-  - nvm install
-  - nvm use
-  - node --version
-
-install: 
-  - yarn install
-
+- cd ./$SERVICE
+- nvm install
+- nvm use
+- node --version
+install:
+- yarn install
 before_script:
-  - SERVICE=$SERVICE make ensure-dependencies
-  - sleep 10
-
+- SERVICE=$SERVICE make ensure-dependencies
+- sleep 10
 script:
-  - make qa
-  - TRAVIS_BUILD_ID=$TRAVIS_BUILD_ID TRAVIS_BUILD_NUMBER=$TRAVIS_BUILD_NUMBER make brand
-
+- make qa
+- TRAVIS_BUILD_ID=$TRAVIS_BUILD_ID TRAVIS_BUILD_NUMBER=$TRAVIS_BUILD_NUMBER make brand
 matrix:
   include:
-    - env: SERVICE=recipes-api
-      services:
-        - docker
-    - env: SERVICE=recipes-crawler
-      services:
-        - docker
-    - env: SERVICE=recipes-id-generator
-      services:
-        - docker
+  - env: SERVICE=recipes-api
+    services:
+    - docker
+  - env: SERVICE=recipes-crawler
+    services:
+    - docker
+  - env: SERVICE=recipes-id-generator
+    services:
+    - docker
