@@ -17,14 +17,13 @@ before_install:
 - nvm install
 - nvm use
 - node --version
-install:
-- yarn install
 before_script:
 - SERVICE=$SERVICE make ensure-dependencies
 - sleep 10
 script:
 - make qa
 - TRAVIS_BUILD_ID=$TRAVIS_BUILD_ID TRAVIS_BUILD_NUMBER=$TRAVIS_BUILD_NUMBER make brand
+- DOCKER_USERNAME=$DOCKER_USERNAME DOCKER_PASSWORD=$DOCKER_PASSWORD make build
 matrix:
   include:
   - env: SERVICE=recipes-api
